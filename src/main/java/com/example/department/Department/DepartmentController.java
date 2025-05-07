@@ -14,12 +14,12 @@ public class DepartmentController {
         this.departmentService = departmentService;
     }
 
-    @GetMapping
+    @GetMapping("/{id}")
     public ResponseEntity<Department> getDepartmentById(@PathVariable Long id){
         Department departmentById = departmentService.getDepartmentById(id);
 
         if(departmentById == null){
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
 
         return new ResponseEntity<>(departmentById, HttpStatus.OK);

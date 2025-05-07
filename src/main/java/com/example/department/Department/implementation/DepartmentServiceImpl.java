@@ -5,10 +5,12 @@ import com.example.department.Department.DepartmentRepository;
 import com.example.department.Department.DepartmentService;
 import com.example.department.Department.dto.Course_Students_DTO;
 import com.example.department.Department.dto.Department_Courses_Students_DTO;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class DepartmentServiceImpl implements DepartmentService {
     DepartmentRepository departmentRepository;
 
